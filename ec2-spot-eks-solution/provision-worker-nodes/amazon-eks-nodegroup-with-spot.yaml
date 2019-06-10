@@ -211,6 +211,21 @@ Parameters:
     - p3.8xlarge
     - p3.16xlarge
     ConstraintDescription: Must be a valid EC2 instance type
+    
+  SpotNode1GroupMinInstancesInService:
+    Type: Number
+    Description: Minimum size of Node Group ASG.
+    Default: 1
+    
+  SpotNode2GroupMinInstancesInService:
+    Type: Number
+    Description: Minimum size of Node Group ASG.
+    Default: 1
+    
+  OnDemandNodeGroupMinInstancesInService:
+    Type: Number
+    Description: Minimum size of Node Group ASG.
+    Default: 1
 
   NodeAutoScalingGroupMinSize:
     Type: Number
