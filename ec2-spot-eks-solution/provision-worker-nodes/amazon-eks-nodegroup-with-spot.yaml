@@ -449,7 +449,7 @@ Resources:
         PropagateAtLaunch: 'true'
     UpdatePolicy:
       AutoScalingRollingUpdate:
-        MinInstancesInService: "${SpotNode1GroupMinInstancesInService}"
+        MinInstancesInService: !Ref SpotNode1GroupMinInstancesInService
         MaxBatchSize: '1'
 
   SpotNode2Group:
@@ -473,7 +473,7 @@ Resources:
         PropagateAtLaunch: 'true'
     UpdatePolicy:
       AutoScalingRollingUpdate:
-        MinInstancesInService: "${SpotNode2GroupMinInstancesInService}"
+        MinInstancesInService: !Ref SpotNode2GroupMinInstancesInService
         MaxBatchSize: '1'
 
   OnDemandNodeGroup:
@@ -497,7 +497,7 @@ Resources:
         PropagateAtLaunch: 'true'
     UpdatePolicy:
       AutoScalingRollingUpdate:
-        MinInstancesInService: "${OnDemandNodeGroupMinInstancesInService}"
+        MinInstancesInService: !Ref OnDemandNodeGroupMinInstancesInService
         MaxBatchSize: '1'
 
   SpotNode1LaunchConfig:
